@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,6 +20,7 @@ import javax.validation.constraints.NotBlank;
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 @Builder
 public
 class Person {
@@ -32,4 +34,6 @@ class Person {
     @NotBlank(message = "LastName is mandatory")
     private String lastName;
     private String middleName;
+    private String email;
+
 }
